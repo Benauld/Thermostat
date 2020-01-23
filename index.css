@@ -38,7 +38,7 @@ body {
     /* prevent scaling past src width (or not) */
     /* max-width: 1200px; */
 }
-.currentTemp, .minMaxTemp, .powerSaveMode{
+.currentTemp, .minTemperature, .maxTemperature, .powerSaveMode{
     color: white;
     /*opacity: 1;*/
     font-family: Roboto, sans-serif;
