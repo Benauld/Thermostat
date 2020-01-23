@@ -36,5 +36,6 @@ $(document).ready(function(){
     $(".currentTemp").text( thermostat.currentTemperature)
     $(".currentTemp").attr("id", thermostat.currentEnergyUsage())
   }
+  
 });
 
