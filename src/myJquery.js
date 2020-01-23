@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var thermostat = new Thermostat()
-  $(".currentTemp").text(thermostat.currentTemperature)
+ updateCurrentTemperature() 
   $(".minTemperature").text(thermostat.minimumTemperature)
   $(".maxTemperature").text(thermostat.maximumTemperature)
   if (thermostat.powerSavingMode === true ) {
@@ -11,25 +11,30 @@ $(document).ready(function(){
 
   $("#increase").click(function(){
     thermostat.increase();
-    $(".currentTemp").text(thermostat.currentTemperature)
+   updateCurrentTemperature() 
   });
   $("#decrease").click(function(){
     thermostat.decrease();
-    $(".currentTemp").text(thermostat.currentTemperature)
+   updateCurrentTemperature() 
   });
   $("#reset").click(function(){
     thermostat.reset();
-    $(".currentTemp").text(thermostat.currentTemperature)
+   updateCurrentTemperature() 
   });
   $("#PSM").click(function(){
     console.log("I am clicking PSM button")
     thermostat.togglePowerSavingMode();
     $(".maxTemperature").text(thermostat.maximumTemperature)
-    $(".currentTemp").text(thermostat.currentTemperature)
+    updateCurrentTemperature()
     if (thermostat.powerSavingMode === true ) {
       $(".powerSaveMode").text("power save on")
     } else {
       $(".powerSaveMode").text("power save off")
     }
   });
+  function updateCurrentTemperature() {
+    $(".currentTemp").text( thermostat.currentTemperature)
+    $(".currentTemp").attr("id", thermostat.currentEnergyUsage())
+  }
 });
+
