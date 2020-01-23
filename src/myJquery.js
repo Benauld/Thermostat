@@ -4,25 +4,32 @@ $(document).ready(function(){
   $(".minTemperature").text(thermostat.minimumTemperature)
   $(".maxTemperature").text(thermostat.maximumTemperature)
   if (thermostat.powerSavingMode === true ) {
-
     $(".powerSaveMode").text("power save on")
-} else {
+  } else {
     $(".powerSaveMode").text("power save off")
-}  
-  $("#hide").click(function(){
-    console.log("hide")
-      $(".button").css('background-color', '#272727');
-      $(this).text('show');
-      $(this).removeAttr('id');
-      $(this).attr('id', 'show');
-      $("#show").click(function(){
-        console.log("show")
-          $(".button").css('background-color', '#2DCE28');
-          $(this).text('hide');
-          $(this).removeAttr('id');
-          $(this).attr('id', 'hide');   
-      });
+  }
+
+  $("#increase").click(function(){
+    thermostat.increase();
+    $(".currentTemp").text(thermostat.currentTemperature)
   });
-
-
+  $("#decrease").click(function(){
+    thermostat.decrease();
+    $(".currentTemp").text(thermostat.currentTemperature)
+  });
+  $("#reset").click(function(){
+    thermostat.reset();
+    $(".currentTemp").text(thermostat.currentTemperature)
+  });
+  $("#PSM").click(function(){
+    console.log("I am clicking PSM button")
+    thermostat.togglePowerSavingMode();
+    $(".maxTemperature").text(thermostat.maximumTemperature)
+    $(".currentTemp").text(thermostat.currentTemperature)
+    if (thermostat.powerSavingMode === true ) {
+      $(".powerSaveMode").text("power save on")
+    } else {
+      $(".powerSaveMode").text("power save off")
+    }
+  });
 });
