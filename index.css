@@ -1,6 +1,4 @@
-/************************************************/
-/***************  General Section ***************/
-/************************************************/
+
 * {
     margin: 0;
     padding: 0;
@@ -19,33 +17,16 @@ body {
     color: #201e1e;
     font-family: Roboto, sans-serif;
     font-size: 14px; /*1em*/
-
 }
-
-.logoParent {
-    flex: 1 1 0;
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 100px;
-    color: #ff6a00;
-    text-decoration: none;
-    position: relative;
-    top:13px
-}
-    .logoParent a {
-        /*aligns text in top to bottom
-        align-items: bottom;
-        -webkit-align-items: bottom;
-        -ms-flex-align: bottom;*/
-    }
-
 .firstPage {
-    background-image: url("../images/chain.jpg");
+    background-image: url("images/fire.jpeg");
     /*opacity: 0.8;*/
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top center;
     min-height: 600px;
     width: 100%;
+    height: 100%;
     /* lt ie8 */
     -ms-background-position-x: center;
     -ms-background-position-y: bottom;
@@ -106,7 +87,7 @@ cursor: pointer;
 margin: 5px;
 }
 
-.buttonSpan {
+.button span {
 cursor: pointer;
 display: inline-block;
 position: relative;
@@ -130,8 +111,6 @@ padding-right: 25px;
 opacity: 1;
 right: 0;
 }
-
-
 
 #powersave{
 background-color: #ff66cc;
