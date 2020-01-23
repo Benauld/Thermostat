@@ -48,12 +48,12 @@ describe('Thermostat', function() {
     expect(thermostat.currentEnergyUsage()).toEqual("low")
   });
 
-  it('checks whether the usage is low when current temperature is less than 18', function() {
+  it('checks whether the usage is medium when current temperature is less than 25', function() {
     thermostat.currentTemperature = 20;
     expect(thermostat.currentEnergyUsage()).toEqual("medium")
   });
 
-  it('checks whether the usage is low when current temperature is less than 18', function() {
+  it('checks whether the usage is high when current temperature 25 or above', function() {
     thermostat.currentTemperature = 30;
     expect(thermostat.currentEnergyUsage()).toEqual("high")
   });
