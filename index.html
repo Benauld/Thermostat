@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="js/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    
    
     <!--<script src="js/jquery-3.3.1.min.js"></script>-->
     
@@ -18,8 +17,8 @@
     <div>
         <section>
             <!--main body of text page 1-->
-            <h1 class="currentTemp"> 25  </h1>
-            <h2 class="currentTempDes">Degrees</h2>
+            <h3 class="currentTemp"> 25  </h3>
+            <h3 class="currentTempDes">Degrees</h3>
             <p>
                 <button id="hide">Hide</button>
                 <button class="button" id="increase">+</button>
@@ -28,20 +27,24 @@
                 <button class="button" id="PSM">PSM</button>
             </p>
         </section>   
-        <h2 class="minTemperature">
-          MAX/MIN 
-      </h2>
-      <h2 class="maxTemperature">
-        MAX/MIN 
-    </h2>
-      <h1 class="powerSaveMode">
+        <h3 class="minTemperature">
+          MIN 
+      </h3>
+      <h3 class="maxTemperature">
+        MIN 
+    </h3>
+      <h3 class="powerSaveMode">
           ON/OFF
-      </h1>
+      </h3>
     </div>
     <div> 
-      <button class="button" id="weatherButton">Get Weather</button>
-      <table id="weatherTable"></table>
+        <h1 id="message"></h1>
+        <button class="button" id="weatherButton">Get Weather</button>
+        
     </div>
+    <script type="text/javascript" src="js/jstorage.js"></script>
     <script src="src/myJquery.js"></script>
     <script src="src/Thermostat.js"></script>
+  <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>-->
 </body>
